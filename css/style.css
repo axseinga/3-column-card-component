@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 26rem) {
+    html {
+      font-size: 70%; } }
+
+body {
+  background-color: #f2f2f2; }
+
+.wrapper {
+  min-width: 200px;
+  min-height: 600px;
+  height: 900px;
+  margin-top: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+  @media only screen and (max-width: 20rem) {
+    .wrapper {
+      margin-top: 60%; } }
+  @media only screen and (min-width: 26rem) {
+    .wrapper {
+      margin-top: 5%;
+      flex-direction: row;
+      height: 300px; } }
+  .wrapper__box {
+    height: 300px;
+    width: 200px;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around; }
+    @media only screen and (min-width: 26rem) {
+      .wrapper__box {
+        padding: 5%;
+        height: 350px; } }
+    .wrapper__box--icon {
+      height: 2.5rem;
+      width: 3.5rem; }
+      @media only screen and (min-width: 26rem) {
+        .wrapper__box--icon {
+          height: 3rem;
+          width: 4rem; } }
+    .wrapper__box--heading {
+      color: #f2f2f2;
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 3rem; }
+    .wrapper__box--content {
+      color: rgba(255, 255, 255, 0.75);
+      font-family: "Lexend Deca", sans-serif;
+      font-size: 1rem; }
+    .wrapper__box--btn {
+      height: 40px;
+      width: 100px;
+      border: 2px solid #f2f2f2;
+      border-radius: 20px;
+      font-size: 1.1rem; }
+
+.box--1 {
+  background-color: #e38826; }
+  @media only screen and (min-width: 26rem) {
+    .box--1 {
+      border-bottom-left-radius: 5px; } }
+
+.box--2 {
+  background-color: #006970; }
+
+.box--3 {
+  background-color: #004241;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  @media only screen and (min-width: 26rem) {
+    .box--3 {
+      border-bottom-left-radius: 0px; } }
+
+.btn--1 {
+  color: #e38826; }
+  .btn--1:hover {
+    color: #f2f2f2;
+    background-color: #e38826; }
+
+.btn--2 {
+  color: #006970; }
+  .btn--2:hover {
+    color: #f2f2f2;
+    background-color: #006970; }
+
+.btn--3 {
+  color: #004241; }
+  .btn--3:hover {
+    color: #f2f2f2;
+    background-color: #004241; }

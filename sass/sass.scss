@@ -1,0 +1,158 @@
+//////////////// Colors ///////////////
+
+$color-primary: hsl(31, 77%, 52%);
+$color-secondary-light: hsl(184, 100%, 22%);
+$color-secondary-dark: hsl(179, 100%, 13%);
+
+$color-grey-dark: hsla(0, 0%, 100%, 0.75);
+$color-grey-light: hsl(0, 0%, 95%);
+
+//////////////// Fonts ///////////////
+
+$font--1: "Lexend Deca", sans-serif;
+$font--2: "Big Shoulders Display", cursive;
+
+//////////// Breakpoints
+$bp-desktop: 26rem;
+$bp-smallest: 20rem;
+
+//////////////// Style ///////////////
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10px/16px
+
+  @media only screen and (min-width: $bp-desktop) {
+    font-size: 70%;
+  }
+}
+
+body {
+  background-color: $color-grey-light;
+}
+
+.wrapper {
+  min-width: 200px;
+  min-height: 600px;
+  height: 900px;
+  margin-top: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin-top: 60%;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    margin-top: 5%;
+    flex-direction: row;
+    height: 300px;
+  }
+
+  &__box {
+    height: 300px;
+    width: 200px;
+    padding: 15%;
+
+    @media only screen and (min-width: $bp-desktop) {
+      padding: 5%;
+      height: 350px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    &--icon {
+      height: 2.5rem;
+      width: 3.5rem;
+
+      @media only screen and (min-width: $bp-desktop) {
+        height: 3rem;
+        width: 4rem;
+      }
+    }
+
+    &--heading {
+      color: $color-grey-light;
+      font-family: $font--2;
+      font-size: 3rem;
+    }
+
+    &--content {
+      color: $color-grey-dark;
+      font-family: $font--1;
+      font-size: 1rem;
+    }
+
+    &--btn {
+      height: 40px;
+      width: 100px;
+      border: 2px solid $color-grey-light;
+      border-radius: 20px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.box {
+  &--1 {
+    background-color: $color-primary;
+    @media only screen and (min-width: $bp-desktop) {
+      border-bottom-left-radius: 5px;
+    }
+  }
+
+  &--2 {
+    background-color: $color-secondary-light;
+  }
+
+  &--3 {
+    background-color: $color-secondary-dark;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    @media only screen and (min-width: $bp-desktop) {
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+.btn {
+  &--1 {
+    color: $color-primary;
+
+    &:hover {
+      color: $color-grey-light;
+      background-color: $color-primary;
+    }
+  }
+  &--2 {
+    color: $color-secondary-light;
+    &:hover {
+      color: $color-grey-light;
+      background-color: $color-secondary-light;
+    }
+  }
+  &--3 {
+    color: $color-secondary-dark;
+    &:hover {
+      color: $color-grey-light;
+      background-color: $color-secondary-dark;
+    }
+  }
+}
